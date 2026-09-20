@@ -10,7 +10,7 @@ reliable, and measuring it in a way you can trust, plus performance-oriented C++
 | --- | --- |
 | [radixgates](https://github.com/YuchenHe985/radixgates) | Go gateway for multi-GPU LLM serving on SGLang, upgraded with prefix-affinity routing, health-aware failover, circuit breaking, admission control and a failure-injection benchmark against the original; includes my 4x RTX 4090 / 4x A100 evaluation. |
 | [llm-serving-eval-kit](https://github.com/YuchenHe985/llm-serving-eval-kit) | Python toolkit for GPU procurement studies: memory / GPU-count sizing, startup-failure diagnosis, benchmark matrices with confidence intervals, and comparisons that flag confounded setups. |
-| [cdc-chunker](https://github.com/YuchenHe985/cdc-chunker) | C++17 content-defined chunking library (Gear and Rabin) for deduplication and incremental backup: about 2 GB/s per core, 96.5% of a 67 MB source tree still deduplicates after 200 edits, checked against an independent reference implementation and an injected-bug mutation check. |
+| [cdc-chunker](https://github.com/YuchenHe985/cdc-chunker) | C++17 content-defined chunking library (Gear and Rabin) for deduplicating storage of large files: about 2 GB/s per core and 7.4 GB/s on 8 threads with output identical to the sequential chunker; checked against an independent reference implementation and a 23-bug injected-fault check. |
 
 ## Background
 
