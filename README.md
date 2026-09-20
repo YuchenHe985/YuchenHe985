@@ -13,7 +13,7 @@ reliable, and measuring it in a way you can trust.
 
 ## Background
 
-- Evaluated SGLang on 4x RTX 4090 (PCIe) and 4x A100 (NVLink) in data, tensor and expert parallel modes; diagnosed CUDA, NCCL and memory failures.
+- Project-based internship on private LLM serving: evaluated SGLang on 4x RTX 4090 (PCIe) and 4x A100 (NVLink) in data, tensor and expert parallel modes and diagnosed CUDA, NCCL and memory failures.
 - Built PySpark / Hive batch pipelines and data-quality checks for a logistics forecasting platform.
 - Coursework this term: SoC architecture (FPGA), digital IC / VLSI (SRAM-based MAC accelerator), embedded systems.
 
