@@ -2,7 +2,7 @@
 
 M.S.E. Electrical Engineering student at the University of Pennsylvania (2026-2028). I work on
 AI infrastructure and GPU systems: serving LLMs on multi-GPU machines, making that serving
-reliable, and measuring it in a way you can trust.
+reliable, and measuring it in a way you can trust, plus performance-oriented C++.
 
 ## Projects
 
@@ -10,6 +10,7 @@ reliable, and measuring it in a way you can trust.
 | --- | --- |
 | [radixgates](https://github.com/YuchenHe985/radixgates) | Go gateway for multi-GPU LLM serving on SGLang, upgraded with prefix-affinity routing, health-aware failover, circuit breaking, admission control and a failure-injection benchmark against the original; includes my 4x RTX 4090 / 4x A100 evaluation. |
 | [llm-serving-eval-kit](https://github.com/YuchenHe985/llm-serving-eval-kit) | Python toolkit for GPU procurement studies: memory / GPU-count sizing, startup-failure diagnosis, benchmark matrices with confidence intervals, and comparisons that flag confounded setups. |
+| [cdc-chunker](https://github.com/YuchenHe985/cdc-chunker) | C++17 content-defined chunking library (Gear and Rabin) for deduplication and incremental backup: about 2 GB/s per core, 96.5% of a 67 MB source tree still deduplicates after 200 edits, checked against an independent reference implementation and an injected-bug mutation check. |
 
 ## Background
 
