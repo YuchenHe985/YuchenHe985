@@ -8,8 +8,8 @@ reliable, and measuring it in a way you can trust.
 
 | Project | What it is |
 | --- | --- |
-| [gpu-inference-gateway-reliability](https://github.com/uchen524/gpu-inference-gateway-reliability) | Go gateway for multi-GPU LLM serving: prefix-affinity routing, health-aware failover, circuit breaking, first-byte-commit retries, admission control, failure-injection benchmark. |
-| [llm-serving-eval-kit](https://github.com/uchen524/llm-serving-eval-kit) | Python toolkit for GPU procurement studies: memory / GPU-count sizing, startup-failure diagnosis, benchmark matrices with confidence intervals, and comparisons that flag confounded setups. |
+| [radixgates](https://github.com/YuchenHe985/radixgates) | Go gateway for multi-GPU LLM serving on SGLang, upgraded with prefix-affinity routing, health-aware failover, circuit breaking, admission control and a failure-injection benchmark against the original; includes my 4x RTX 4090 / 4x A100 evaluation. |
+| [llm-serving-eval-kit](https://github.com/YuchenHe985/llm-serving-eval-kit) | Python toolkit for GPU procurement studies: memory / GPU-count sizing, startup-failure diagnosis, benchmark matrices with confidence intervals, and comparisons that flag confounded setups. |
 
 ## Background
 
