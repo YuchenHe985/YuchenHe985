@@ -4,7 +4,7 @@
 
 **GPU / AI Systems · Systems Performance · Embedded / SoC**
 
-M.S.E. Electrical Engineering @ University of Pennsylvania (2026--2028)
+M.S.E. Electrical Engineering @ University of Pennsylvania (2026–2028)
 
 Building hardware-aware software from real measurements: multi-GPU inference, reliable serving, performance-oriented C++, and register-level systems.
 
