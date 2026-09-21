@@ -1,23 +1,36 @@
-# Hi, I'm Yuchen He
+<div align="center">
 
-M.S.E. Electrical Engineering student at the University of Pennsylvania (2026-2028). I build
-hardware-aware systems software: multi-GPU LLM serving, failure-tolerant gateways, reproducible
-performance evaluation, and performance-oriented C++. I am also developing embedded/SoC depth
-through register-level firmware, FPGA architecture, and digital-design work.
+# Yuchen He
 
-## Projects
+**GPU / AI Systems · Systems Performance · Embedded / SoC**
 
-| Project | What it is |
-| --- | --- |
-| [radixgates](https://github.com/YuchenHe985/radixgates) | Go reference gateway for multi-GPU LLM serving on SGLang: prefix-affinity routing, health-aware failover, circuit breaking, bounded admission, failure injection, and tests against real llama.cpp workers; includes my 4x RTX 4090 / 4x A100 evaluation. |
-| [llm-serving-eval-kit](https://github.com/YuchenHe985/llm-serving-eval-kit) | Standard-library Python toolkit for memory/GPU-count sizing, startup-failure diagnosis, reproducible benchmark matrices, and comparison reports that surface confounded setups instead of over-claiming them. |
-| [llm-finetune-lab](https://github.com/YuchenHe985/llm-finetune-lab) | On-device text-to-SQL feasibility study: LoRA with PyTorch DDP, execution-based evaluation, quantized llama.cpp deployment, and an evidence-based recommendation to keep a person in the loop. |
-| [cdc-chunker](https://github.com/YuchenHe985/cdc-chunker) | C++17 Gear and Rabin content-defined chunking library: about 2 GB/s sequential and 7.4 GB/s with 8 threads on an Apple M1, bit-identical parallel output, 31 tests, independent-reference checks, sanitizers, and a 23/23 mutation check. |
+M.S.E. Electrical Engineering @ University of Pennsylvania (2026--2028)
 
-## Background
+Building hardware-aware software from real measurements: multi-GPU inference, reliable serving, performance-oriented C++, and register-level systems.
 
-- Mentor-guided industry project on private LLM serving: evaluated SGLang on 4x RTX 4090 (PCIe) and 4x A100 (NVLink) in data, tensor and expert parallel modes and diagnosed CUDA, NCCL and memory failures.
-- Built PySpark / Hive batch pipelines and data-quality checks for a logistics forecasting platform.
-- Coursework this term: SoC architecture (FPGA), digital IC / VLSI (SRAM-based MAC accelerator), embedded systems.
+`Python` · `Go` · `C/C++` · `CUDA/NCCL` · `Linux`
 
-**Languages:** Python, Go, C/C++, SQL &nbsp;|&nbsp; **Contact:** heyuchen@seas.upenn.edu
+**Open to Summer 2027 internships in GPU/AI systems, embedded software, and hardware-aware performance engineering.**
+
+</div>
+
+## Selected systems work
+
+| Project | Engineering focus | Evidence |
+| --- | --- | --- |
+| **[RadixGates](https://github.com/YuchenHe985/radixgates)** | Failure-tolerant Go gateway for multi-GPU LLM serving: prefix affinity, health-aware failover, circuit breaking, admission control, and OpenAI-compatible routing | **85.2% → 99.7%** clean completions during node-crash tests; **53 tests** under `go test -race`; real evaluation on **4× RTX 4090 and 4× A100** |
+| **[llm-serving-eval-kit](https://github.com/YuchenHe985/llm-serving-eval-kit)** | GPU-memory sizing, topology interpretation, startup-log diagnosis, repeated benchmark matrices, and confounder-aware comparison | **11 failure signatures**, bootstrap intervals, cost/SLO reporting, and **39 unit/end-to-end tests** |
+| **[cdc-chunker](https://github.com/YuchenHe985/cdc-chunker)** | C++17 Gear/Rabin content-defined chunking with streaming and bit-identical parallel output | About **2.0 GB/s** sequential and **7.4 GB/s** with 8 threads on Apple M1; **31 tests** plus **23/23 mutation checks** |
+| **[llm-finetune-lab](https://github.com/YuchenHe985/llm-finetune-lab)** | Local text-to-SQL feasibility study: LoRA/DDP, execution-based evaluation, GGUF deployment, and guardrail analysis | **398 MB** Q4 model, **82.6%** execution accuracy, **1.76×** two-GPU training speedup; evidence-based human-in-the-loop release decision |
+
+## What connects the projects
+
+- **Measure before optimizing:** record topology, software versions, failure modes, repetitions, and uncertainty before attributing a result.
+- **Design for failure:** make overload, node loss, partial streams, and invalid model output explicit instead of hiding them behind averages.
+- **Follow the hardware:** connect routing, cache locality, communication topology, memory limits, and parallelism choices to observed behavior.
+
+## Current direction
+
+I am extending this systems work toward embedded and accelerator design through register-level firmware, FPGA/SoC architecture, and digital IC/VLSI coursework. My earlier engineering experience includes PySpark/Hive pipelines and data-quality checks for a regional logistics forecasting platform.
+
+**Contact:** [heyuchen@seas.upenn.edu](mailto:heyuchen@seas.upenn.edu)
