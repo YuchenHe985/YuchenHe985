@@ -12,6 +12,8 @@ Building hardware-aware software from real measurements: multi-GPU inference, re
 
 **Open to Summer 2027 internships in GPU/AI systems, embedded software, and hardware-aware performance engineering.**
 
+[yuchenhe985.github.io](https://yuchenhe985.github.io) · [LinkedIn](https://www.linkedin.com/in/yuchenhe-) · [yuchenhe.work@outlook.com](mailto:yuchenhe.work@outlook.com)
+
 </div>
 
 ## Selected systems work
@@ -32,5 +34,3 @@ Building hardware-aware software from real measurements: multi-GPU inference, re
 ## Current direction
 
 I am extending this systems work toward embedded and accelerator design through register-level firmware, FPGA/SoC architecture, and digital IC/VLSI coursework. My earlier engineering experience includes PySpark/Hive pipelines and data-quality checks for a regional logistics forecasting platform.
-
-**Contact:** [heyuchen@seas.upenn.edu](mailto:heyuchen@seas.upenn.edu)
