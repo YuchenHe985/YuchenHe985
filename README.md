@@ -25,6 +25,14 @@ Building hardware-aware software from real measurements: multi-GPU inference, re
 | **[cdc-chunker](https://github.com/YuchenHe985/cdc-chunker)** | C++17 Gear/Rabin content-defined chunking with streaming and bit-identical parallel output | About **2.0 GB/s** sequential and **7.4 GB/s** with 8 threads on Apple M1; **31 tests** plus **23/23 mutation checks** |
 | **[llm-finetune-lab](https://github.com/YuchenHe985/llm-finetune-lab)** | Local text-to-SQL feasibility study: LoRA/DDP, execution-based evaluation, GGUF deployment, and guardrail analysis | **398 MB** Q4 model, **82.6%** execution accuracy, **1.76×** two-GPU training speedup; evidence-based human-in-the-loop release decision |
 
+## Software and data engineering
+
+| Project | Engineering focus | Evidence |
+| --- | --- | --- |
+| **[conference-ops](https://github.com/YuchenHe985/conference-ops)** | Spring Boot 3 + PostgreSQL 16 backend: row-locked seat allocation with a FIFO waitlist, exclusion constraints against double-booking, idempotent retries, optimistic locking, Flyway | **60** concurrent requests for **10** seats never oversell (the test fails when the lock is removed); **25** integration tests on real PostgreSQL |
+| **[review-pipeline](https://github.com/YuchenHe985/review-pipeline)** | Python/DuckDB/Parquet pipeline: data contracts with quarantine, content-addressed idempotent stages, point-in-time features, leakage-safe evaluation | **494K** real reviews in about 45 s; a random split would overstate R² **4.6×**; top-decile helpful rate **2.13×** the base rate |
+| **[budget-manager](https://github.com/YuchenHe985/budget-manager)** | Java 17/JavaFX desktop app on SQLite: integer-cent money, versioned migrations, all-or-nothing CSV import, verified backup and restore | **40** JUnit tests; schema upgrades keep existing data; a damaged backup is refused with live data untouched |
+
 ## What connects the projects
 
 - **Measure before optimizing:** record topology, software versions, failure modes, repetitions, and uncertainty before attributing a result.
