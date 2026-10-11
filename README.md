@@ -31,15 +31,15 @@ Building hardware-aware software from real measurements: multi-GPU inference, re
 | --- | --- | --- |
 | **[conference-ops](https://github.com/YuchenHe985/conference-ops)** | Spring Boot 3 + PostgreSQL 16 backend: row-locked seat allocation with a FIFO waitlist, exclusion constraints against double-booking, idempotent retries, optimistic locking, Flyway | **60** concurrent requests for **10** seats never oversell (the test fails when the lock is removed); **25** integration tests on real PostgreSQL |
 | **[review-pipeline](https://github.com/YuchenHe985/review-pipeline)** | Python/DuckDB/Parquet pipeline: data contracts with quarantine, content-addressed idempotent stages, point-in-time features, leakage-safe evaluation | **494K** real reviews in about 45 s; a random split would overstate R² **4.6×**; top-decile helpful rate **2.13×** the base rate |
-| **[budget-manager](https://github.com/YuchenHe985/budget-manager)** | Java 17/JavaFX desktop app on SQLite: integer-cent money, versioned migrations, all-or-nothing CSV import, verified backup and restore | **40** JUnit tests; schema upgrades keep existing data; a damaged backup is refused with live data untouched |
 
 ## Field notes
 
-Short notes on what a measurement taught me, on [my site](https://yuchenhe985.github.io/notes/):
+Four short notes on what a measurement taught me, on [my site](https://yuchenhe985.github.io/notes/):
 
-- [A loop that cost nothing](https://yuchenhe985.github.io/notes/a-loop-that-cost-nothing/): a job went round my application agent's pipeline about 300 times, nearly free in tokens, which is why nothing caught it.
-- [Twelve of fourteen alarms were false](https://yuchenhe985.github.io/notes/twelve-of-fourteen-alarms/): an alarm should fire only when every piece of evidence that would cancel it is missing.
-- [A simulation can't see a cache](https://yuchenhe985.github.io/notes/simulation-cannot-see-a-cache/) · [The wrong answers that raise no error](https://yuchenhe985.github.io/notes/wrong-answers-that-raise-no-error/) · [Same weights, different dtype](https://yuchenhe985.github.io/notes/same-weights-different-dtype/) · [Average chunk size isn't what an edit costs](https://yuchenhe985.github.io/notes/average-chunk-size-is-not-the-cost/)
+- [A simulation can't see a cache](https://yuchenhe985.github.io/notes/simulation-cannot-see-a-cache/): my gateway's failure tests all passed, and a routing rule I had added still cut prefix-cache hits from 59.1% to 24.4% on real engines.
+- [The wrong answers that raise no error](https://yuchenhe985.github.io/notes/wrong-answers-that-raise-no-error/): the 16.4% of a fine-tuned model's SQL that runs cleanly and returns the wrong rows.
+- [Same weights, different dtype](https://yuchenhe985.github.io/notes/same-weights-different-dtype/): only 27.6% of a fine-tuned model's bytes match its base, and the encoding mattered more than the chunker.
+- [Average chunk size isn't what an edit costs](https://yuchenhe985.github.io/notes/average-chunk-size-is-not-the-cost/): an edit is more likely to land in a big chunk, so the spread of chunk sizes matters as much as the average.
 
 ## What connects the projects
 
