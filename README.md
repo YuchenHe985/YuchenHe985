@@ -31,6 +31,7 @@ Building hardware-aware software from real measurements: multi-GPU inference, re
 | --- | --- | --- |
 | **[conference-ops](https://github.com/YuchenHe985/conference-ops)** | Spring Boot 3 + PostgreSQL 16 backend: row-locked seat allocation with a FIFO waitlist, exclusion constraints against double-booking, idempotent retries, optimistic locking, Flyway | **60** concurrent requests for **10** seats never oversell (the test fails when the lock is removed); **25** integration tests on real PostgreSQL |
 | **[review-pipeline](https://github.com/YuchenHe985/review-pipeline)** | Python/DuckDB/Parquet pipeline: data contracts with quarantine, content-addressed idempotent stages, point-in-time features, leakage-safe evaluation | **494K** real reviews in about 45 s; a random split would overstate R² **4.6×**; top-decile helpful rate **2.13×** the base rate |
+| **[budget-manager](https://github.com/YuchenHe985/budget-manager)** | Java 17/JavaFX desktop app on SQLite: integer-cent money, versioned migrations, all-or-nothing CSV import, verified backup and restore | **40** JUnit tests; schema upgrades keep existing data; a damaged backup is refused with live data untouched |
 
 ## Field notes
 
